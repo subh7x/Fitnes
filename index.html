@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1713">
+<meta name="description" content="Fitness Weight Gain 60 Day planner with Indian diet, ingredient-based meals, workouts, schedule and progress tracking.">
+<title>FITNESS — Weight Gain 60 Days</title>
+<link rel="icon" href="assets/icons/favicon.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home"><img src="assets/icons/logo.png" alt="Fitness logo"><span>FITNESS<small>WEIGHT GAIN 60 DAYS</small></span></a>
+  <button id="themeBtn" class="iconbtn" aria-label="Toggle dark mode">☀️</button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div>
+    <p class="eyebrow">60-DAY WEIGHT GAIN PLAN</p>
+    <h1>Build weight.<br><b>Build strength.</b></h1>
+    <p class="lead">A practical Indian-food planner that uses the ingredients you already have, plus a simple one-day strength workout.</p>
+    <a class="btn primary" href="#planner">Create my plan →</a>
+    <p class="safety">Healthy gain is gradual. Going from 40 kg to 60 kg in 60 days is generally not a safe target. Use this app to build consistent nutrition and strength, and consider a doctor/dietitian if you are underweight or have medical concerns.</p>
+  </div>
+  <img class="hero-art" src="assets/icons/app-icon.png" alt="Fitness app icon">
+</section>
+
+<section id="planner" class="card">
+  <div class="section-head"><div><p class="eyebrow">YOUR INPUT</p><h2>Available ingredients</h2></div><button id="restartBtn" class="btn ghost">Restart</button></div>
+  <p class="muted">Example: rice, dal, milk, banana, oats, eggs, paneer, potato, peanuts, roti, curd, vegetables.</p>
+  <textarea id="ingredients" rows="3" placeholder="Type ingredients separated by commas..."></textarea>
+  <div class="grid2">
+    <label>Current weight (kg)<input id="weight" type="number" min="20" max="250" value="40"></label>
+    <label>Goal weight (kg)<input id="goalWeight" type="number" min="25" max="250" value="50"></label>
+  </div>
+  <button id="makeDiet" class="btn primary full">Generate 1-Day Diet</button>
+</section>
+
+<section id="diet" class="card">
+  <div class="section-head"><div><p class="eyebrow">FOOD</p><h2>1-Day Indian Weight-Gain Diet</h2></div><span id="calBadge" class="badge">≈ 2,300 kcal</span></div>
+  <div id="dietList"></div>
+  <div class="tip">💡 Tip: Add calories with milk/curd, nuts, peanuts, ghee, banana or paneer when these fit your diet and available ingredients. Increase portions gradually rather than forcing very large meals.</div>
+</section>
+
+<section id="workout" class="card">
+  <div class="section-head"><div><p class="eyebrow">STRENGTH</p><h2>1-Day Workout</h2></div><span class="badge">45–55 min</span></div>
+  <p class="muted">Designed for a beginner. Warm up first; use a load you can control. Stop if you feel sharp pain, dizziness or unusual breathlessness.</p>
+  <div id="workoutList" class="exercise-grid"></div>
+</section>
+
+<section id="schedule" class="card">
+  <p class="eyebrow">YOUR ROUTINE</p><h2>Daily schedule</h2>
+  <div class="timeline">
+    <div><b>6:00 AM</b><span>Wake + water</span></div>
+    <div><b>6:15 AM</b><span>Light mobility / sunlight</span></div>
+    <div><b>6:45 AM</b><span>Breakfast</span></div>
+    <div><b>7:00 AM–1:40 PM</b><span>Your stated afternoon sleep/rest window — if this is actually daytime sleep, keep a consistent schedule and aim for adequate total sleep.</span></div>
+    <div><b>1:40 PM</b><span>Lunch</span></div>
+    <div><b>5:00 PM</b><span>Wake / snack</span></div>
+    <div><b>6:00 PM</b><span>Workout</span></div>
+    <div><b>7:00 PM</b><span>Post-workout meal</span></div>
+    <div><b>8:30 PM</b><span>Dinner</span></div>
+    <div><b>11:00 PM</b><span>Light pre-bed snack if hungry</span></div>
+    <div><b>12:00 AM</b><span>Night sleep</span></div>
+  </div>
+  <p class="muted">Your stated sleep window is unusual (12 AM–6 AM plus 7 AM–1:40 PM). If the 7 AM–1:40 PM period is regular sleep, prioritize a consistent total sleep routine and discuss it with a clinician if you still feel tired.</p>
+</section>
+
+<section id="progress" class="card">
+  <div class="section-head"><div><p class="eyebrow">TRACK</p><h2>60-Day Progress</h2></div><button id="saveWeight" class="btn primary">Save today</button></div>
+  <div class="grid2"><label>Today's weight (kg)<input id="todayWeight" type="number" step="0.1"></label><label>Day<input id="dayNum" type="number" min="1" max="60" value="1"></label></div>
+  <div id="history"></div>
+</section>
+</main>
+<footer>FITNESS • Weight Gain 60 Days • Works offline as a PWA</footer>
+<script src="script.js"></script>
+</body>
+</html>
